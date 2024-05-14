@@ -23,6 +23,7 @@ set nowrap
 
 call plug#begin("~/.vim/plugged")
  " Plugin Section
+ Plug 'tikhomirov/vim-glsl'
  Plug 'leafOfTree/vim-matchtag'
  Plug 'ryanoasis/vim-devicons'
  Plug 'honza/vim-snippets'
