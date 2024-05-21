@@ -24,7 +24,7 @@
         "network",
        // "power-profiles-daemon",
        // "cpu",
-        "memory",
+        // "memory",
        // "temperature",
        // "backlight",
        // "keyboard-state",
