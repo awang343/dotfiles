@@ -1,5 +1,5 @@
 " This line makes pacman-installed global Arch Linux vim packages work.
-source /usr/share/nvim/archlinux.vim
+source /usr/share/nvim/archlinux.lua
 
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
