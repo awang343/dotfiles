@@ -1,4 +1,0 @@
-connect.dial_devices="[{\"address\":\"172.18.131.0\",\"app_state\":\"MISSING\",\"created_timestamp\":1714016289,\"device_id\":\"e7b8479f-1cb6-363e-81f4-1e16d52c5ae4\",\"dial_location_url\":\"http://172.18.131.0:60000/dd.xml\",\"display_name\":\"Raegan's 3rd Fire TV\",\"last_seen\":1714377341,\"manufacturer\":\"Amazon\",\"model_name\":\"AFTMM\",\"product_cap\":\"\",\"public_ip\":\"2620:6e:6000:3100:182f:90b5:99d6:7423\",\"wol\":{\"all_interfaces\":false,\"delay_ms\":50,\"mac\":\"140ac56538d8\",\"port\":9,\"retries\":800}}]"
-audio.play_bitrate_non_metered_migrated=true
-ui.hide_hpto=true
-ui.track_notifications_enabled=false
