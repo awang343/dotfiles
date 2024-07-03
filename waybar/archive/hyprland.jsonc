@@ -15,7 +15,8 @@
     ],
     "modules-center": [
         //"mpd",
-        "custom/spotify"
+        // "custom/spotify",
+        "mpris"
     ],
     "modules-right": [
        // "mpd",
@@ -72,13 +73,20 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
-    "custom/spotify": {
-        "exec": "/usr/bin/python3 /home/alanxw/.config/waybar/mediaplayer.py --player spotify",
-        "format": "{}  ",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "dynamic-order": ["title", "artist"],
+        "player-icons": {
+            "default": "󰐍",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": ""
+	    },
+	    "ignored-players": ["chromium", "firefox"],
+        "title-len": 20,
+        "artist-len": 20
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
