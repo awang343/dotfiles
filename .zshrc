@@ -12,6 +12,7 @@ export PATH=/home/alanxw/.local/bin:/home/alanxw/.go/bin:/home/alanxw/.spicetify
 # fzf
 source <(fzf --zsh)
 
+
 # Basic command aliases
 alias ls='eza -h --group-directories-first --color=always'
 alias cat='bat'
@@ -20,9 +21,17 @@ alias mv='mv -i'
 alias tp='trash-put'
 alias lsblk='lsblk -o name,label,uuid,fstype,size'
 alias rm='echo'
+alias pkglist='comm -23 <(pacman -Qqt | sort) <(pacman -Qqg base | sort)'
+alias nms='nms -ac'
+alias up-pipe='curl -F file=@- 0x0.st | wl-copy'
+alias wine='DISPLAY= wine'
+alias wine64='DISPLAY= wine64'
+alias ytfzf='ytfzf -T wayland -t'
 
 # Editing
-bindkey -e
+bindkey -v
+bindkey "^ " autosuggest-accept
+
 alias vim='nvim'
 alias svim='sudoedit'
 

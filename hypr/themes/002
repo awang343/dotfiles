@@ -1,0 +1,34 @@
+#vim: set ft=conf:
+
+$color0 = rgba(76767fff) #76767f
+
+$color1 = rgba(ada5aaff) #ada5aa
+
+$color2 = rgba(0b2537ff) #0b2537
+
+$color3 = rgba(9b9299ff) #9b9299
+
+$color4 = rgba(56626bff) #56626b
+
+$color5 = rgba(3b4b58ff) #3b4b58
+
+$color6 = rgba(57393fff) #57393f
+
+$color7 = rgba(725a5cff) #725a5c
+
+$color8 = rgba(876a6aff) #876a6a
+
+$color9 = rgba(273341ff) #273341
+
+$color10 = rgba(9d7a78ff) #9d7a78
+
+$color11 = rgba(d3b6b4ff) #d3b6b4
+
+$color12 = rgba(c7897eff) #c7897e
+
+$color13 = rgba(010a1dff) #010a1d
+
+$color14 = rgba(46f4dfff) #46f4df
+
+$color15 = rgba(154252ff) #154252
+

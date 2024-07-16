@@ -1,8 +1,7 @@
 " This line makes pacman-installed global Arch Linux vim packages work.
 source /usr/share/nvim/archlinux.lua
-
 set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
+
 set ignorecase              " case insensitive 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
@@ -14,50 +13,57 @@ set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 
-set relativenumber
+set number
 set clipboard+=unnamedplus   " using system clipboard
 set ttyfast                 " Speed up scrolling in Vim
-set ma
+set modifiable              " Make buffers modifiable
 set foldmethod=marker
 set nowrap
 set splitright
 
-syntax on                   " syntax highlighting
+let g:vimtex_view_method = 'zathura'
+let g:vimwiki_list = [{'path': '~/my-life/', 'syntax': 'markdown', 'ext':'md', 'diary_rel_path': 'daily-notes'}]
+
+filetype plugin indent on
 
 call plug#begin("~/.vim/plugged")
- " Syntax highlighting
- Plug 'tikhomirov/vim-glsl'
- Plug 'Vimjas/vim-python-pep8-indent'
- Plug 'lervag/vimtex'
+    Plug 'is0n/fm-nvim'
+    Plug 'vimwiki/vimwiki'
+    Plug 'preservim/nerdtree'
+    
+    " Syntax highlighting
+    Plug 'tikhomirov/vim-glsl'
+    Plug 'Vimjas/vim-python-pep8-indent'
+    Plug 'lervag/vimtex'
+    Plug 'ms-jpq/coq_nvim'
+    Plug 'ms-jpq/coq.artifacts'
 
- " Functionality
- Plug 'tpope/vim-commentary'
- Plug 'leafOfTree/vim-matchtag'
- Plug 'honza/vim-snippets'
- Plug 'scrooloose/nerdtree'
+    " Functionality
+    Plug 'tpope/vim-commentary'
+    Plug 'leafOfTree/vim-matchtag'
+    Plug 'jiangmiao/auto-pairs'
 
- " Visuals
- Plug 'NvChad/nvim-colorizer.lua'
- Plug 'ellisonleao/gruvbox.nvim'
- Plug 'ryanoasis/vim-devicons'
+    " Visuals
+    Plug 'NvChad/nvim-colorizer.lua'
+    Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+syntax on                   " syntax highlighting
+
 
 lua require 'colorizer'.setup {filetypes = { "*" }, user_default_options = { rgb_fn = true; }}
 lua require 'gruvbox'.setup {transparent_mode = true}
 colorscheme gruvbox
 
+
 hi LineNr guifg=#ffffff
-
-" This is necessary for VimTeX to load properly. The "indent" is optional.
-" Note that most plugin managers will do this automatically.
-filetype plugin indent on
-let g:vimtex_view_method = 'zathura'
-
-let mapleader = " "
-let maplocalleader = "\\"
 
 " keybinds
 " move line or visually selected block - alt+j/k
+let mapleader = "\\"
+let maplocalleader = "\ "
+
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
@@ -65,9 +71,10 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <C-j> :m +1<CR>
 nnoremap <C-k> :m -2<CR>
 
-" nerdtree
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+vnoremap > >gv
+vnoremap < <gv
 
-" vim-powered terminal in split window
-tnoremap <Esc> <C-u>exit<CR>:sleep 50m<CR>
+" nerdtree
+nnoremap <C-t> :Xplr<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
+

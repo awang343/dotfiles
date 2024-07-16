@@ -8,5 +8,4 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Set default editors for sudoedit
 export EDITOR=nvim;
 export VISUAL=nvim;
-bindkey -e;
 
