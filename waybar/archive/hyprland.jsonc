@@ -33,6 +33,7 @@
             "4": "",
             "5": "",
             "6": "",
+            "8": "",
             "9": "󰊗",
             "10": "󰨇",
             "urgent": "",
@@ -51,8 +52,8 @@
             "paused": ""
 	    },
 	    "ignored-players": ["chromium", "firefox"],
-        "title-len": 20,
-        "artist-len": 20
+        "title-len": 40,
+        "artist-len": 40
     },
     "tray": {
         "spacing": 10

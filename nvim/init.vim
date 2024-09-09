@@ -22,7 +22,10 @@ set nowrap
 set splitright
 
 let g:vimtex_view_method = 'zathura'
-let g:vimwiki_list = [{'path': '~/my-life/', 'syntax': 'markdown', 'ext':'md', 'diary_rel_path': 'daily-notes'}]
+let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext':'md', 'diary_rel_path': 'daily-notes', 'listsyms': ' ○◐●✓'}]
+let g:path_to_creds = '~/.vim/credentials.json' " this is required
+let g:gdoc_file_path = '~/.vim/gdocs/' " optional; default is ./
+let g:token_directory = '~/.vim/' " optional; default is ./
 
 filetype plugin indent on
 
@@ -35,8 +38,6 @@ call plug#begin("~/.vim/plugged")
     Plug 'tikhomirov/vim-glsl'
     Plug 'Vimjas/vim-python-pep8-indent'
     Plug 'lervag/vimtex'
-    Plug 'ms-jpq/coq_nvim'
-    Plug 'ms-jpq/coq.artifacts'
 
     " Functionality
     Plug 'tpope/vim-commentary'
@@ -61,8 +62,7 @@ hi LineNr guifg=#ffffff
 
 " keybinds
 " move line or visually selected block - alt+j/k
-let mapleader = "\\"
-let maplocalleader = "\ "
+let maplocalleader = "\\"
 
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
@@ -75,6 +75,8 @@ vnoremap > >gv
 vnoremap < <gv
 
 " nerdtree
-nnoremap <C-t> :Xplr<CR>
-nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-e> :Xplr<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
+" vimwiki
+nnoremap <Space> :VimwikiToggleListItem<CR>

@@ -5,13 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/home/alanxw/.local/bin:/home/alanxw/.go/bin:/home/alanxw/.spicetify:$PATH
-
 # fzf
 source <(fzf --zsh)
-
 
 # Basic command aliases
 alias ls='eza -h --group-directories-first --color=always'
@@ -21,16 +16,18 @@ alias mv='mv -i'
 alias tp='trash-put'
 alias lsblk='lsblk -o name,label,uuid,fstype,size'
 alias rm='echo'
-alias pkglist='comm -23 <(pacman -Qqt | sort) <(pacman -Qqg base | sort)'
+alias pkglist='pacman -Qqt | sort'
 alias nms='nms -ac'
 alias up-pipe='curl -F file=@- 0x0.st | wl-copy'
-alias wine='DISPLAY= wine'
-alias wine64='DISPLAY= wine64'
-alias ytfzf='ytfzf -T wayland -t'
+alias pref32='env WINEARCH=win32 WINEPREFIX=/home/alanxw/.wine'
+alias pref64='env WINEPREFIX=/home/alanxw/.wine64'
+alias wine='echo USE pref32/64'
+
 
 # Editing
 bindkey -v
 bindkey "^ " autosuggest-accept
+setopt extended_glob
 
 alias vim='nvim'
 alias svim='sudoedit'
@@ -46,13 +43,10 @@ gitauth() {
 }
 
 # Micromamba
-alias mminstall='micromamba install -c conda-forge'
-alias mm='micromamba'
+alias mm="micromamba"
 alias conda='micromamba' 
 
 # Application aliases
-alias code='code --enable-proposed-api ms-toolsai.jupyter'
-alias matlab='/usr/share/matlab/bin/matlab 2>&1 /dev/null & disown'
 alias zth='exec zathura --fork'
 alias mpv='mpv --no-audio-display'
 alias feh='feh -T default'
@@ -69,11 +63,11 @@ antidote load
 # !! Contents within this block are managed by 'mamba init' !!
 export MAMBA_EXE='/home/alanxw/.local/bin/micromamba';
 export MAMBA_ROOT_PREFIX='/home/alanxw/.micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
 else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    alias mm="$MAMBA_EXE"  # Fallback on help from mamba activate
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
