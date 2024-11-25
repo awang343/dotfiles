@@ -43,6 +43,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'tpope/vim-commentary'
     Plug 'leafOfTree/vim-matchtag'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'davidhalter/jedi-vim'
 
     " Visuals
     Plug 'NvChad/nvim-colorizer.lua'

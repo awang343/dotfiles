@@ -27,8 +27,8 @@
         "all-outputs": true,
         "format": "{name}:{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
+            "1": "",
+            "2": "",
             "3": "",
             "4": "",
             "5": "",
@@ -51,7 +51,7 @@
         "status-icons": {
             "paused": ""
 	    },
-	    "ignored-players": ["chromium", "firefox"],
+	    "ignored-players": ["firefox"],
         "title-len": 40,
         "artist-len": 40
     },

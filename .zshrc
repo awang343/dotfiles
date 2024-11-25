@@ -21,6 +21,7 @@ alias nms='nms -ac'
 alias up-pipe='curl -F file=@- 0x0.st | wl-copy'
 alias pref32='env WINEARCH=win32 WINEPREFIX=/home/alanxw/.wine'
 alias pref64='env WINEPREFIX=/home/alanxw/.wine64'
+alias prefgame='env WINEPREFIX=/home/alanxw/.wine-games'
 alias wine='echo USE pref32/64'
 
 
@@ -41,13 +42,17 @@ gitauth() {
     eval `ssh-agent`; 
     ssh-add ${1-~/.ssh/gh_ed25519};
 }
+myunzip () 
+{ 
+    unzip "$1" -d "${1%.zip}"
+}
 
 # Micromamba
 alias mm="micromamba"
 alias conda='micromamba' 
 
 # Application aliases
-alias zth='exec zathura --fork'
+alias zth='zathura --fork'
 alias mpv='mpv --no-audio-display'
 alias feh='feh -T default'
 alias ping='gping'
