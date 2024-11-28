@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export WINEPREFIX='/home/alanxw/.wine-games'
 # fzf
 source <(fzf --zsh)
 
@@ -19,10 +20,6 @@ alias rm='echo'
 alias pkglist='pacman -Qqt | sort'
 alias nms='nms -ac'
 alias up-pipe='curl -F file=@- 0x0.st | wl-copy'
-alias pref32='env WINEARCH=win32 WINEPREFIX=/home/alanxw/.wine'
-alias pref64='env WINEPREFIX=/home/alanxw/.wine64'
-alias prefgame='env WINEPREFIX=/home/alanxw/.wine-games'
-alias wine='echo USE pref32/64'
 
 
 # Editing
@@ -49,7 +46,6 @@ myunzip ()
 
 # Micromamba
 alias mm="micromamba"
-alias conda='micromamba' 
 
 # Application aliases
 alias zth='zathura --fork'
