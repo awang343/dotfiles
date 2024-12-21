@@ -1,0 +1,7 @@
+key_up=Shift-K
+key_down=Shift-J
+color=/home/alanxw/.config/wofi/themes/auto
+show=run
+width=20%
+prompt=
+hide_scroll=true

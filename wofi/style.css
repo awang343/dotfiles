@@ -1,0 +1,53 @@
+* {
+    font-family: monospace;
+    color: white;
+}
+
+window {
+    background-color: --wofi-color5;
+    border-radius: 10px;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    /* border-bottom: 3px solid black; */
+    background-color: --wofi-color10;
+    user-select: none;
+}
+
+#inner-box {
+    background-color: --wofi-color9;
+}
+
+#outer-box {
+    margin: 0px;
+    padding:20px;
+    background-color: --wofi-color9;
+    border-radius: 8px;
+}
+
+#entry {
+    border-radius: 5px;
+}
+
+#scroll {
+    margin-top: 10px;
+}
+
+#text {
+    padding: 5px;
+}
+
+#entry:nth-child(even){
+    background-color: --wofi-color9;
+}
+
+#entry:selected {
+    background-color: --wofi-color11;
+}
+
+#text:selected {
+}
+
