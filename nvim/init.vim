@@ -5,6 +5,8 @@ set nocompatible            " disable compatibility to old-time vi
 set ignorecase              " case insensitive 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
+set title
+set titlestring=%{fnamemodify(getcwd(),':t')}/%t
 
 set tabstop=4              " number of columns occupied by a tab 
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
@@ -23,7 +25,7 @@ set splitright
 
 let g:vimtex_view_method = 'zathura'
 let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext':'md', 'diary_rel_path': 'daily-notes', 'listsyms': ' ○◐●✓'}]
-let g:python3_host_prog = expand("~/.micromamba/envs/qtab/bin/python")
+let g:python3_host_prog = expand("~/.micromamba/envs/qtab/bin/python3")
 
 filetype plugin indent on
 
@@ -36,17 +38,17 @@ call plug#begin("~/.vim/plugged")
     Plug 'tikhomirov/vim-glsl'
     Plug 'Vimjas/vim-python-pep8-indent'
     Plug 'lervag/vimtex'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     " Functionality
     Plug 'tpope/vim-commentary'
     Plug 'leafOfTree/vim-matchtag'
     Plug 'jiangmiao/auto-pairs'
     Plug 'benlubas/molten-nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'sbdchd/neoformat'
 
     " Visuals
     Plug 'NvChad/nvim-colorizer.lua'
-    Plug 'ellisonleao/gruvbox.nvim'
-    Plug 'comfysage/evergarden'
     Plug 'EdenEast/nightfox.nvim'
     Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -55,10 +57,13 @@ syntax on                   " syntax highlighting
 
 
 lua require 'colorizer'.setup {filetypes = { "*" }, user_default_options = { rgb_fn = true; }}
-lua require 'gruvbox'.setup {transparent_mode = true}
-lua require 'evergarden'.setup {transparent_background = true, contrast_dark=soft}
-lua require 'nightfox'.setup {options = {transparent = true}}
+" lua require 'gruvbox'.setup {transparent_mode = true}
+" lua require 'evergarden'.setup {transparent_background = true, contrast_dark=soft}
+lua require 'nightfox'.setup { options = { transparent = true } }
 colorscheme carbonfox 
+
+lua require 'nvim-treesitter.configs'.setup { ensure_installed = { "tsx", "typescript", "html", "javascript" },  highlight = { enable = true } }
+autocmd BufWritePre *.js Neoformat
 
 hi LineNr guifg=#ffffff
 
@@ -79,3 +84,4 @@ vnoremap < <gv
 " nerdtree
 nnoremap <C-e> :Xplr<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+

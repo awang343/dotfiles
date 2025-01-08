@@ -19,7 +19,8 @@ alias tp='trash-put'
 alias lsblk='lsblk -o name,label,uuid,fstype,size'
 alias rm='echo'
 alias nms='nms -ac'
-alias up-pipe='curl -F file=@- 0x0.st | wl-copy'
+alias upload='curl -F file=@- 0x0.st | wl-copy'
+alias netstat='sudo netstat -tupan'
 
 
 # Editing
@@ -73,3 +74,9 @@ fi
 unset __mamba_setup
 # <<< mamba initialize <<<
 
+
+PATH="/home/alanxw/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/alanxw/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/alanxw/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/alanxw/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/alanxw/perl5"; export PERL_MM_OPT;
