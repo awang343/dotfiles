@@ -1,34 +1,34 @@
 #vim: set ft=conf:
 
-$color0 = rgba(2e5d6dff) #2e5d6d
+$color0 = rgba(417eb4ff) #417eb4
 
-$color1 = rgba(263441ff) #263441
+$color1 = rgba(417eb4ff) #417eb4
 
-$color2 = rgba(10264fff) #10264f
+$color2 = rgba(417eb4ff) #417eb4
 
-$color3 = rgba(000412ff) #000412
+$color3 = rgba(417eb4ff) #417eb4
 
-$color4 = rgba(1a1323ff) #1a1323
+$color4 = rgba(588cbeff) #588cbe
 
-$color5 = rgba(516377ff) #516377
+$color5 = rgba(417eb4ff) #417eb4
 
-$color6 = rgba(67b1a2ff) #67b1a2
+$color6 = rgba(588cbeff) #588cbe
 
-$color7 = rgba(9aafa8ff) #9aafa8
+$color7 = rgba(417eb4ff) #417eb4
 
-$color8 = rgba(7f5a52ff) #7f5a52
+$color8 = rgba(548bc1ff) #548bc1
 
-$color9 = rgba(42514aff) #42514a
+$color9 = rgba(417eb4ff) #417eb4
 
-$color10 = rgba(87a58dff) #87a58d
+$color10 = rgba(548bc1ff) #548bc1
 
-$color11 = rgba(dfc5acff) #dfc5ac
+$color11 = rgba(417eb4ff) #417eb4
 
-$color12 = rgba(7b726bff) #7b726b
+$color12 = rgba(548bc1ff) #548bc1
 
-$color13 = rgba(a39282ff) #a39282
+$color13 = rgba(417eb4ff) #417eb4
 
-$color14 = rgba(573f3dff) #573f3d
+$color14 = rgba(548bc1ff) #548bc1
 
-$color15 = rgba(002728ff) #002728
+$color15 = rgba(417eb4ff) #417eb4
 
