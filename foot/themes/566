@@ -1,34 +1,34 @@
 [colors]
 
-regular0=887e89 #887e89
+regular0=756973 #756973
 
-regular1=756973 #756973
+regular1=584a57 #584a57
 
-regular2=584a57 #584a57
+regular2=4d5772 #4d5772
 
-regular3=a9a3b1 #a9a3b1
+regular3=8e6352 #8e6352
 
-regular4=9d909a #9d909a
+regular4=724540 #724540
 
-regular5=c9a79e #c9a79e
+regular5=964b38 #964b38
 
-regular6=dfb9ac #dfb9ac
+regular6=756973 #756973
 
-regular7=4d5772 #4d5772
+regular7=584a57 #584a57
 
-bright0=a88476 #887e89
+bright0=4d5772 #4d5772
 
-bright1=8e6352 #756973
+bright1=8e6352 #8e6352
 
-bright2=724540 #584a57
+bright2=724540 #724540
 
-bright3=964b38 #a9a3b1
+bright3=964b38 #964b38
 
-bright4=bc9683 #9d909a
+bright4=756973 #756973
 
-bright5=b06f59 #c9a79e
+bright5=584a57 #584a57
 
-bright6=cc8d6a #dfb9ac
+bright6=4d5772 #4d5772
 
-bright7=887e89 #4d5772
+bright7=8e6352 #8e6352
 

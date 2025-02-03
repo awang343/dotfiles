@@ -1,5 +1,9 @@
-export WINEPREFIX='/home/alanxw/.wine-games'
-source <(fzf --zsh)
+export WINEPREFIX=/home/alanxw/.wine-games
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt appendhistory
 
 # Basic command aliases
 alias ls='eza -h --group-directories-first --color=always'

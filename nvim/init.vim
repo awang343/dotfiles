@@ -26,9 +26,9 @@ set nowrap
 set splitright"}}}
 
 let g:vimtex_view_method = 'zathura'
-let g:vimwiki_list = [{'path': '~/notes/', 'syntax': 'markdown', 'ext':'md', 'diary_rel_path': 'daily-notes', 'listsyms': ' ○◐●✓'}]
 let g:python3_host_prog = expand("~/.micromamba/envs/qtab/bin/python3")
 let g:shfmt_opt="-ci"
+let g:latexindent_opt="-m"
 
 " Define a custom command to set g:python3_host_prog with a dynamic path
 command -nargs=1 PythonEnv let g:python3_host_prog = expand("~/.micromamba/envs/<args>/bin/python3")
@@ -41,7 +41,6 @@ syntax on
 " {{{ Plugins
 call plug#begin("~/.vim/plugged")
     Plug 'is0n/fm-nvim'
-    Plug 'vimwiki/vimwiki'
     Plug 'preservim/nerdtree'
 
     " Syntax highlighting
@@ -69,7 +68,7 @@ lua require 'colorizer'.setup {filetypes = { "*" }, user_default_options = { rgb
 lua require 'nightfox'.setup { options = { transparent = true } }
 colorscheme carbonfox 
 
-lua require 'nvim-treesitter.configs'.setup { ensure_installed = { "tsx", "typescript", "html", "javascript", "bash" },  highlight = { enable = true } }
+lua require 'nvim-treesitter.configs'.setup { ensure_installed = { "tsx", "typescript", "html", "javascript", "bash", "latex" },  highlight = { enable = true } }
 autocmd BufWritePre *.js Neoformat
 
 " }}}
