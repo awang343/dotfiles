@@ -46,6 +46,7 @@ vim.g.vimwiki_list = {{
     ext = "md"
 }}
 vim.g.vimwiki_global_ext = 0
+vim.cmd("colorscheme nightfox")
 -- }}}
 
 -- {{{ Keybinds
@@ -69,20 +70,3 @@ vim.cmd([[
 command -nargs=1 PythonEnv let g:python3_host_prog = expand("~/.micromamba/envs/<args>/bin/python3")
 ]])
 -- }}}
-
--- {{{ Lua Script
-require("colorizer").setup {
-    filetypes = { "*" },
-    user_default_options = { rgb_fn = true }
-}
-
-require("nightfox").setup {
-    options = { transparent = true }
-}
-
-require("nvim-treesitter.configs").setup {
-    ensure_installed = { "tsx", "typescript", "html", "javascript", "bash", "latex" },
-    highlight = { enable = true }
-}
--- }}}
-
