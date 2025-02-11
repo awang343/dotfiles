@@ -1,0 +1,19 @@
+#vim: set ft=conf:
+
+$color0 = rgba(6e9da4ff) #6e9da4
+$color1 = rgba(92aaaaff) #92aaaa
+$color2 = rgba(a09696ff) #a09696
+$color3 = rgba(c0b8b8ff) #c0b8b8
+$color4 = rgba(e7c3abff) #e7c3ab
+$color5 = rgba(dbad95ff) #dbad95
+$color6 = rgba(517794ff) #517794
+$color7 = rgba(2b577aff) #2b577a
+$color8 = rgba(4990acff) #4990ac
+$color9 = rgba(29395eff) #29395e
+$color10 = rgba(2d2526ff) #2d2526
+$color11 = rgba(3061a4ff) #3061a4
+$color12 = rgba(605c58ff) #605c58
+$color13 = rgba(b0887bff) #b0887b
+$color14 = rgba(c49466ff) #c49466
+$color15 = rgba(001519ff) #001519
+$groupbar = 0x00151900 #001519

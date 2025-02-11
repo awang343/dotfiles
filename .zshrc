@@ -5,6 +5,8 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 setopt appendhistory
 
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # Basic command aliases
 alias ls='eza -h --group-directories-first --color=always'
 alias cat='bat'
@@ -18,10 +20,10 @@ alias nms='nms -ac'
 alias upload='curl -F file=@- 0x0.st | wl-copy'
 alias netstat='sudo netstat -tupan'
 
-
 # Editing
 bindkey -v
-bindkey "^ " autosuggest-accept
+bindkey "\t" autosuggest-accept
+bindkey "^ " complete-word
 setopt extended_glob
 
 alias vim='nvim'
@@ -31,22 +33,12 @@ alias svim='sudoedit'
 conf() {
   nvim ~/.config/$1
 }
-gitauth() {
-    pkill ssh-agent; 
-    eval `ssh-agent`; 
-    ssh-add ${1-~/.ssh/gh_ed25519};
-}
-myunzip () 
-{ 
-    unzip "$1" -d "${1%.zip}"
-}
 
 # Micromamba
 alias mm="micromamba"
 
 # Application aliases
 alias zth='zathura --fork'
-alias mpv='mpv --no-audio-display'
 alias feh='feh -T default'
 alias ping='gping'
 
@@ -55,7 +47,9 @@ antidote load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 [[ -s /home/alanxw/.autojump/etc/profile.d/autojump.sh ]] && source /home/alanxw/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
