@@ -1,6 +1,3 @@
--- This line makes pacman-installed global Arch Linux vim packages work.
-vim.cmd("source /usr/share/nvim/archlinux.lua")
-
 -- Highlight settings
 vim.cmd("hi LineNr guifg=#ffffff")
 
@@ -46,7 +43,7 @@ vim.g.vimwiki_list = {{
     ext = "md"
 }}
 vim.g.vimwiki_global_ext = 0
-vim.cmd("colorscheme nightfox")
+-- vim.cmd("colorscheme nightfox")
 -- }}}
 
 -- {{{ Keybinds
