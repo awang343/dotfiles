@@ -63,10 +63,23 @@ vim.api.nvim_set_keymap("v", ">", ">gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<", "<gv", { noremap = true, silent = true })
 
 -- File managers
-vim.api.nvim_set_keymap("n", "<C-e>", ":Xplr<CR>", { noremap = true, silent = true })
+-- nnoremap <C-e> :execute 'Xplr ' . expand('%:p:h')<CR>
+
+vim.api.nvim_set_keymap("n", "<C-e>", ":execute 'Xplr ' . expand('%:p:h')<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-t>", ":NERDTreeToggle<CR>", { noremap = true, silent = true })
 
 vim.cmd([[
 command -nargs=1 PythonEnv let g:python3_host_prog = expand("~/.micromamba/envs/<args>/bin/python3")
 ]])
 -- }}}
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.opt_local.wrap = true
+        vim.opt_local.linebreak = true
+        vim.opt_local.list = false
+        vim.keymap.set("n", "j", "gj", { buffer = true })
+        vim.keymap.set("n", "k", "gk", { buffer = true })
+    end
+})

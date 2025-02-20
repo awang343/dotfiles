@@ -5,7 +5,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 setopt appendhistory
 
-export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
 # Basic command aliases
 alias ls='eza -h --group-directories-first --color=always'
@@ -22,8 +22,8 @@ alias netstat='sudo netstat -tupan'
 
 # Editing
 bindkey -v
-bindkey "\t" autosuggest-accept
-bindkey "^ " complete-word
+bindkey -M viins "^[[27;5;13~" autosuggest-accept
+bindkey "\t" complete-word
 setopt extended_glob
 
 alias vim='nvim'
