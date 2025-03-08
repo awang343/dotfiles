@@ -36,6 +36,7 @@ vim.cmd("syntax on")
 
 -- {{{ Global Variables
 vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_syntax_enabled = 0
 vim.g.python3_host_prog = vim.fn.expand("~/.micromamba/envs/qtab/bin/python3")
 vim.g.shfmt_opt = "-ci"
 vim.g.latexindent_opt = "-m"
